@@ -1,0 +1,42 @@
+.Weather {
+    padding: 20px;
+    border: 1px solid  #dadde1;
+    color: rgb(135, 135, 135);
+    
+    border-radius: 4px;
+}
+
+input {
+    padding: 10px;
+    border: 5px solid red;
+}
+
+.Weather h1 {
+   margin: 15px 0 0 0;
+}
+
+.Weather li {
+    list-style: none;
+}
+
+.Weather .date
+ {
+  padding: 0;
+}
+
+.Weather .degree {
+    font-size: 64px;
+}
+
+.Weather .farenheit {
+    font-size: 20px ;
+    position: relative;
+    top: -30px;
+}
+
+.Weather img {
+    width: 100px;
+    height: auto;
+   position: relative;
+   top: -22px;
+}
