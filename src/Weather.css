@@ -26,12 +26,15 @@ input {
 
 .Weather .degree {
     font-size: 64px;
+    margin: 8px;
+    position: relative;
+    top: -10px;
 }
 
 .Weather .farenheit {
     font-size: 20px ;
     position: relative;
-    top: -30px;
+    top: -43px;
 }
 
 .Weather img {
