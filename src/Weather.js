@@ -17,9 +17,11 @@ export default function Weather (props) {
             humidity: response.data.main.humidity,
             description: response.data.weather[0].description,
             date: new Date(response.data.dt * 1000),
-            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+            icon: response.data.weather[0].icon
+      
             
         });
+        console.log(response.data.weather[0].icon)
         setLoaded(true);
     }
 
@@ -56,7 +58,7 @@ export default function Weather (props) {
                 </div>
              </div>
              </form>
-             <WeatherInfo data={weatherData}/>
+             <WeatherInfo data={weatherData} alt={props.description}/>
             </div>
            
         ); 
