@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
+
 import ForecastWeather from "./ForecastWeather";
 import './WeatherForecast.css';
 import axios from "axios";
@@ -16,8 +16,11 @@ export default function WeatherForecast(props) {
     }
     console.log(props)
    
-  if (loaded) {
-    <ForecastWeather code={forecast[0]}/>
+  if (loaded) { 
+  
+        <ForecastWeather code={forecast[0]}/>
+    
+    return null;
   } else {
     let apiKey = "bea8e5cfc09f2c80726c878f5fd81290";
     let longitude = props.cordinates.lon;

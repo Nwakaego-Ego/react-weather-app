@@ -1,6 +1,8 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon"
 
 export default function ForecastWeather(props) {
+    console.log(props)
      return (
         <div className="WeatherForecast">
            <div className="WeatherForecast-day">{props.forecast[0].dt}</div>
