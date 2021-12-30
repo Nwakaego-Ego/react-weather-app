@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function WeatherForecast(props) {
     let [loaded, setLoaded ] = useState(false)
-    let [forecast, setForecast] = useState("")
+    let [forecast, setForecast] = useState([])
 
 
     function handleResponse(response) {
@@ -14,13 +14,11 @@ export default function WeatherForecast(props) {
         setForecast(response.data.daily)
         setLoaded(true)
     }
-    console.log(props)
-   
-  if (loaded) { 
   
-        <ForecastWeather code={forecast[0]}/>
-    
-    return null;
+   
+  if (loaded && forecast.length > 0 ) { 
+    console.log("working")
+    return <ForecastWeather code={forecast[0]}/>
   } else {
     let apiKey = "bea8e5cfc09f2c80726c878f5fd81290";
     let longitude = props.cordinates.lon;
