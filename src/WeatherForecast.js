@@ -18,7 +18,19 @@ export default function WeatherForecast(props) {
    
   if (loaded && forecast.length > 0 ) { 
     console.log("working")
-    return <ForecastWeather code={forecast[0]}/>
+    return (
+        <div className="WeatherForecast">
+          <div className="row">
+           {forecast.map(function (dailyForecast, index) {
+          return (
+            <div className="col">
+            <ForecastWeather code={dailyForecast}/>
+            </div>
+          )
+        })}
+         </div>
+       </div>
+    )
   } else {
     let apiKey = "bea8e5cfc09f2c80726c878f5fd81290";
     let longitude = props.cordinates.lon;
