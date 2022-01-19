@@ -58,7 +58,7 @@ export default function Weather (props) {
                  </div>
                  <div className="col-3">
                     <button className="btn btn-danger w-100 p-2">Search</button>
-                    <button className="btn btn-danger w-100 p-2">Search</button>
+                    
                 </div>
              </div>
              </form>
